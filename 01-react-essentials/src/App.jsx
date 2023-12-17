@@ -3,8 +3,11 @@ import CoreConcept from "./components/CoreConcept";
 import TabButton from "./components/TabButton";
 import { CORE_CONCEPTS } from "./data";
 
+let tabContent = "Please click a button";
+
 function App() {
   function handleSelect(selectedButton) {
+    tabContent = selectedButton;
     console.log(selectedButton);
   }
 
@@ -43,8 +46,8 @@ function App() {
             <TabButton onSelect={() => handleSelect("Props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("State")}>State</TabButton>
           </menu>
-          <div id="tab-content"></div>
         </section>
+        {tabContent}
       </main>
     </div>
   );
