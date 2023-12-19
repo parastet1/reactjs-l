@@ -32,7 +32,7 @@ function App() {
           <ul>
             {CORE_CONCEPTS &&
               CORE_CONCEPTS.map((coreConcept) => (
-                <CoreConcept {...coreConcept} />
+                <CoreConcept key={coreConcept.title} {...coreConcept} />
               ))}
           </ul>
         </section>
